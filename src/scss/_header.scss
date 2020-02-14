@@ -1,0 +1,83 @@
+
+.header{
+  height: 80px;
+  background-color: #2a3180;
+  display: flex;
+  align-items: center;
+
+  &__row{
+    justify-content: space-between;
+  }
+
+  &__logo{
+    width: 63px;
+    height: 55px;
+  }
+
+  &__call{
+
+    a{
+      color: white;
+      font-family: 'Jura', sans-serif;
+      font-size: 22px;
+    }
+  }
+
+  .burger{
+    position: relative;
+    width: 60px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    span{
+      position: absolute;
+      display: block;
+      height: 4px;
+      background: #fff;
+      border-radius: 4px;
+
+      &:nth-child(1){
+        top: 12px;
+        width: 60px;
+       }
+
+      &:nth-child(2){
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        right: 0;
+      }
+
+      &:nth-child(3){
+        bottom: 12px;
+        width: 60px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen
+and (min-width: 1200px){
+}
