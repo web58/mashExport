@@ -20,8 +20,12 @@ jQuery(function($) {
       $('.burger').toggleClass('burger-closed');
     });
 
-
     // burger end
+
+    $('.repairs-slider').slick({
+      dots: true,
+      arrows: true
+    })
 
   });
 

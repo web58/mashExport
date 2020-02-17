@@ -155,3 +155,73 @@
 
 
 }
+
+.repairs{
+
+  position: relative;
+
+  &-slider{
+
+    .slick-prev, .slick-next{
+      width: 54px;
+      height: 54px;
+      background: url('./files/imgs/arrow.svg');
+      background-size: cover;
+      left: 10px;
+      z-index: 1;
+      opacity: .75;
+      transition: .5s;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &::before{
+        display: none;
+      }
+    }
+
+    .slick-prev{
+      transform: scaleX(-1) translateY(-50%);
+    }
+
+    .slick-next{
+      right: 10px;
+      left: auto;
+    }
+
+    .slick-dots{
+
+      bottom: -36px;
+
+      li{
+        margin: 0;
+        width: 19px;
+
+        button{
+          &::before{
+            font-size: 47px;
+            opacity: 1;
+            color: $def-color;
+            line-height: 18px;
+          }
+        }
+
+        &.slick-active{
+          width: 18px;
+          height: 18px;
+          background-color: $def-color;
+          border-radius: 50%;
+
+          button{
+            &::before{
+              color: white;
+              font-size: 52px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
