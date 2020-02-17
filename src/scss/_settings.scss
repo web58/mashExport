@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Jura:500,700&display=swap&subset=cyrillic');
 
-@font-face {
-  font-family: 'Jura Bold';
-  src: url('./files/fonts/Jura/Bold/Jura-Bold.eot');
-  src: url('./files/fonts/Jura/Bold/Jura-Bold.eot?#iefix') format('embedded-opentype'),
-  url('./files/fonts/Jura/Bold/Jura-Bold.woff') format('woff'),
-  url('./files/fonts/Jura/Bold/Jura-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+$def-color: #2a3180;
 
-$def-color: #363B6A;
+@keyframes circleAnimate {
+  100% {
+    border-color: #fff;
+    opacity: .9;
+    transform: scale(1)
+  }
+}
 
 *{
   box-sizing: border-box;

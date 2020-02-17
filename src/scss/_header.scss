@@ -6,6 +6,7 @@
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
   &__row{
     justify-content: space-between;
@@ -19,11 +20,72 @@
 
   &__menu{
     display: none;
+
+    &.fixed{
+      display: block;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      background-color: #2a3180;
+      z-index: 99;
+      width: 300px;
+      right: 0;
+      padding-top: 100px;
+
+      ul{
+        flex-direction: column;
+
+        li{
+          margin-bottom: 20px;
+        }
+      }
+
+      p{
+        color: white;
+        font-family: 'Jura', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 150px;
+        text-align: right;
+      }
+    }
+
+    ul{
+
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+      li{
+
+        text-align: end;
+
+        a{
+          color: white;
+          font-family: 'Jura', sans-serif;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
   }
 
   &__call{
 
     display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 0;
+
+    &.mobile{
+      display: flex;
+      top: 330px;
+      z-index: 99;
+      align-items: flex-end;
+      position: absolute;
+      right: 0;
+    }
 
     a{
       color: white;
@@ -35,11 +97,36 @@
   }
 
   .burger{
-    position: relative;
+    position: absolute;
+    right: 0;
+    //position: relative;
     width: 60px;
     cursor: pointer;
     margin-right: 10px;
     height: 33px;
+    z-index: 101;
+
+    &-closed{
+
+      span{
+
+        &:nth-child(1){
+          transform: rotate(45deg);
+          transition: .3s linear;
+          top: 5px !important;
+        }
+
+        &:nth-child(2){
+          background: transparent !important;
+        }
+
+        &:nth-child(3){
+          transform: rotate(-45deg);
+          transition: .3s linear;
+          top: 5px !important;
+        }
+      }
+    }
 
     span{
       position: absolute;
@@ -70,6 +157,7 @@
 
 @media screen
 and (min-width: 768px){
+
   .header{
     height: 120px;
 
@@ -78,11 +166,21 @@ and (min-width: 768px){
       width: 90px;
     }
 
+    &__menu{
+
+      &.fixed{
+
+        width: 370px;
+
+        p{
+          padding-top: 125px;
+        }
+      }
+    }
+
     &__call{
-      align-items: center;
-      justify-content: center;
       display: flex;
-      flex-direction: column;
+      margin-right: 30px;
     }
   }
 }
@@ -96,22 +194,13 @@ and (min-width: 1200px){
     &__menu{
       display: block;
 
-      ul{
-
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-
-        li{
-
-          a{
-            color: white;
-            font-family: 'Jura', sans-serif;
-            font-weight: bold;
-            font-size: 20px;
-          }
-        }
+      p{
+        display: none;
       }
+    }
+
+    &__call{
+      margin-right: 0;
     }
 
     .burger{

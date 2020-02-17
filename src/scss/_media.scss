@@ -1,4 +1,22 @@
 @media screen
 and (min-width: 768px){
 
+  .main{
+    margin-top: 120px;
+  }
+
+  .intro{
+    display: block;
+  }
+}
+
+@media screen
+and (min-width: 1200px){
+  .main{
+    margin-top: 0;
+  }
+
+  .intro-option__text{
+    font-size: 20px;
+  }
 }
