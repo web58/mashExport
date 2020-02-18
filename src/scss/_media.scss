@@ -8,6 +8,135 @@ and (min-width: 768px){
   .intro{
     display: block;
   }
+
+  .repairs{
+
+    &-slider{
+
+      .slick-prev, .slick-next{
+        width: 60px;
+        height: 60px;
+      }
+
+      .slick-prev{
+        left: 0;
+      }
+
+      .slick-next{
+        right: 0;
+      }
+    }
+  }
+
+  .advantages{
+
+    &-item{
+
+      &:nth-child(2n-1){
+        .advantages-item__title{
+          text-align: end;
+        }
+      }
+
+      height: 200px;
+      display: block;
+
+      &__line-left{
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: $def-color;
+        top: 46px;
+        z-index: -1;
+
+      }
+
+      &__circle-left{
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 40px;
+        background: white;
+        z-index: -1;
+
+      }
+
+      &__line-right{
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: $def-color;
+        top: 46px;
+        right: 0;
+        z-index: -1;
+
+      }
+
+      &__circle-right{
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 40px;
+        background: white;
+        right: 0;
+        z-index: -1;
+
+      }
+
+      img{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+      }
+
+      &__line-vert{
+        left: 50%;
+      }
+
+      &__circle-vert{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 138px;
+        background: white;
+        z-index: -1;
+      }
+
+      &__title{
+        padding-left: 0;
+        padding-top: 5px;
+        line-height: 38px;
+        font-size: 22px;
+        cursor: pointer;
+
+      }
+
+      &__desc{
+        display: none;
+
+        &.active{
+          display: block;
+          background-color: aliceblue;
+          z-index: 1;
+          position: absolute;
+          width: 440px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
 }
 
 @media screen
@@ -18,5 +147,68 @@ and (min-width: 1200px){
 
   .intro-option__text{
     font-size: 20px;
+  }
+
+  .repairs{
+
+    &-slider{
+
+      .slick-prev, .slick-next{
+        width: 82px;
+        height: 82px;
+      }
+
+      .slick-prev{
+        left: 43px;
+      }
+
+      .slick-next{
+        right: 43px;
+      }
+    }
+  }
+
+  .advantages{
+    &-item{
+
+      &__line-left{
+        &.ll1{
+          left: 8.333%;
+          width: 50/6*5%;
+        }
+
+        &.ll2{
+          left: 4.1666%;
+        }
+      }
+
+      &__circle-left{
+        &.ll1{
+          left: 8.333%;
+        }
+        &.ll2{
+          left: 4.1666%;
+        }
+      }
+
+      &__line-right{
+        &.lr1{
+          right: 8.333%;
+          width: 50/6*5%;
+        }
+        &.lr2{
+          right: 4.1666%;
+        }
+      }
+
+      &__circle-right{
+        &.lr1{
+          right: 8.333%;
+        }
+        &.lr2{
+          right: 4.1666%;
+        }
+      }
+    }
   }
 }

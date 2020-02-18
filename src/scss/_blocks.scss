@@ -1,16 +1,6 @@
 section{
   padding-top: 80px;
-}
-
-.def-btn{
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  padding: 10px 25px;
-  border: 1px solid white;
-  text-align: center;
-  width: max-content;
-  cursor: pointer;
+  position: relative;
 }
 
 .def-title{
@@ -23,8 +13,19 @@ section{
     font-size: 32px;
     text-align: center;
     background-color: #fff;
+    font-weight: 400;
   }
+}
 
+.def-btn{
+  background-color: $def-color;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  padding: 15px;
 }
 
 @media screen
@@ -45,11 +46,14 @@ and (min-width: 768px){
       width: 100%;
       background: $def-color;
       left: 0;
-      top: 122px;
+      top: 118px;
       z-index: -1;
     }
   }
 
+  .def-btn{
+    padding: 30px 0;
+  }
 
 
 }

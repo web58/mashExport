@@ -1,3 +1,62 @@
+<div id="preloader" class="visible">
+  <img src="files/imgs/logo.svg" alt="">
+</div>
+
+<script>
+  var removePreloader = function (ms) {
+    return window.setTimeout(function () {
+      document.body.classList.add('hidden');
+      document.body.classList.remove('visible');
+    }, ms);
+  };
+
+  document.body.classList.add('visible');
+  var defaultRemove = removePreloader(3000);
+
+  window.onload = function () {
+    clearTimeout(defaultRemove);
+    removePreloader(0);
+  }
+</script>
+
+<style>
+
+  #preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background-color: white;
+  }
+
+  #preloader img {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  body.visible #preloader{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+
+  body.hidden #preloader {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0s 2s, opacity 2s linear;
+    height: 0;
+    width: 0;
+
+  }
+
+</style>
+
 <header class="header">
 
   <div class="container">
@@ -32,7 +91,7 @@
       </div>
       <div class="header__call col-md-4 offset-md-5 col-xl-3 offset-xl-0">
         <a href="tel:+79273783109">8 (927) 378-31-09</a>
-        <div class="def-btn">Заказать звонок</div>
+        <div class="header-btn">Заказать звонок</div>
       </div>
       <div class="burger">
         <span></span>
