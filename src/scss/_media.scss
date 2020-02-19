@@ -138,6 +138,7 @@ and (min-width: 768px){
           top: 120px;
 
           &::before{
+            z-index: -1;
             display: block;
             content: "";
             border-bottom: 11px solid rgba(170, 173, 204, 0.8);
