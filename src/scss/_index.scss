@@ -21,7 +21,7 @@
 
 .intro{
   display: none;
-  background: url('./files/imgs/main-pic.jpg') 50% 100%;
+  background: url('./files/imgs/main-pic.jpg');
   background-size: cover;
   width: 100%;
   height: 0;
@@ -313,5 +313,138 @@
       }
       
     }
+  }
+}
+
+.sale{
+
+  &-wrapper{
+    background: url('./files/imgs/engine.jpg') 50% 100%;
+    padding: 20px 10px 30px;
+  }
+
+  &__desc{
+
+    background-color: rgba($def-color, .75);
+    padding: 30px 10px;
+    margin-bottom: 30px;
+
+    &-title{
+      color: white;
+      font-size: 24px;
+      margin-bottom: 27px;
+    }
+
+    &-text{
+      color: white;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  img{
+    padding: 0;
+    height: 100%;
+  }
+}
+
+.catalog{
+
+  margin-bottom: 80px;
+
+  &-slider{
+
+    .slick-slide{
+      position: relative;
+      padding: 0 12px;
+    }
+
+    .slick-list{
+      margin: 0 -12px;
+      padding-bottom: 12px;
+    }
+
+    img{
+      width: 100%;
+      border: 1px solid $def-color;
+    }
+
+    .img-shadow{
+      width: calc(100% - 22px);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: rgba(170, 173, 204, 0.8);
+      z-index: -1;
+      transform: translate3d(-11px, 11px, 0);
+    }
+
+    margin-bottom: 110px!important;
+
+    .slick-prev, .slick-next{
+      width: 54px;
+      height: 54px;
+      background: url('./files/imgs/arrow.svg');
+      background-size: cover;
+      left: 10px;
+      z-index: 1;
+      opacity: .75;
+      transition: .5s;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &::before{
+        display: none;
+      }
+    }
+
+    .slick-prev{
+      transform: scaleX(-1) translateY(-50%);
+    }
+
+    .slick-next{
+      right: 10px;
+      left: auto;
+    }
+
+    .slick-dots{
+
+      bottom: -45px;
+
+      li{
+        margin: 0;
+        width: 19px;
+
+        button{
+          &::before{
+            font-size: 47px;
+            opacity: 1;
+            color: $def-color;
+            line-height: 18px;
+          }
+        }
+
+        &.slick-active{
+          width: 18px;
+          height: 18px;
+          background-color: $def-color;
+          border-radius: 50%;
+
+          button{
+            &::before{
+              color: white;
+              font-size: 52px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .def-form{
+
   }
 }
