@@ -121,6 +121,8 @@
 
     &-closed{
 
+      top: 33px;
+
       span{
 
         &:nth-child(1){
@@ -195,7 +197,15 @@ and (min-width: 768px){
       display: flex;
       margin-right: 30px;
     }
+
+    .burger{
+      &-closed{
+        top: auto;
+      }
+    }
   }
+
+
 }
 
 @media screen

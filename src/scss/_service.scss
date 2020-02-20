@@ -1,0 +1,46 @@
+.intro{
+  &.page-service{
+    background: url('./files/imgs/work-main.jpg') 50%;
+    padding-top: 42%;
+  }
+}
+
+.what-repairs{
+
+  &-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+
+    &__img{
+      position: relative;
+      margin-bottom: 35px;
+
+      .img-shadow{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: rgba(170, 173, 204, 0.8);
+        z-index: -1;
+        transform: translate3d(10px, 10px, 0);
+      }
+    }
+
+    &__desc{
+
+      &-title{
+        line-height: 30px;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      &-text{
+        line-height: 25px;
+        color: #242424;
+        font-size: 16px;
+      }
+    }
+  }
+}

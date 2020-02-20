@@ -185,13 +185,12 @@ and (min-width: 768px){
   }
 
   .catalog{
+
+    &-wrap{
+      margin-bottom: 100px;
+    }
+
     &-slider{
-
-      .img-shadow{
-        //width: 92%;
-      }
-
-
 
       .slick-prev, .slick-next{
         width: 60px;
@@ -206,6 +205,15 @@ and (min-width: 768px){
         right: 0;
       }
     }
+
+    &-item{
+      flex-direction: row;
+      align-items: flex-start;
+
+      &__img{
+        margin-right: 30px;
+      }
+    }
   }
 }
 
@@ -215,8 +223,20 @@ and (min-width: 1200px){
     margin-top: 0;
   }
 
-  .intro-option__text{
-    font-size: 20px;
+  .intro{
+    &-option__text{
+      font-size: 20px;
+    }
+
+    &.page-catalog{
+      padding-top: 31%;
+      background-size: cover;
+    }
+
+    &.page-service{
+      padding-top: 26%;
+      background-size: cover;
+    }
   }
 
   .repairs{
@@ -346,5 +366,11 @@ and (min-width: 1200px){
         right: 43px;
       }
     }
+
+    &-item{
+      margin-bottom: 60px;
+    }
   }
+
+
 }

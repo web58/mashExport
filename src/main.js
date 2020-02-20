@@ -95,6 +95,52 @@ jQuery(function($) {
 
     // advantages item desc and img click end
 
+    /*form-call start*/
+
+    $('.header-btn,.def-btn').on('click', function (e) {
+      event.preventDefault(e);
+      $('.form-call').fadeIn();
+    });
+
+    $('.def-form-back, .def-form__close').on('click', function () {
+      $('.form-call, .form-thanks').fadeOut();
+    });
+
+    /*form-call end*/
+
+    // POPUP FORM ON
+
+    $('form').on('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData();
+      data.append('action', 'form_action');
+      var dataSend = this.querySelectorAll('[data-send]');
+
+      for (var i = 0; i < dataSend.length; i++) {
+        var text, checked;
+        data.append(dataSend[i].getAttribute('data-send'), dataSend[i].value);
+        console.log(dataSend[i].value);
+        dataSend[i].value = '';
+
+      }
+
+      $.ajax({
+        url: ajax_params.ajax_url,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function (res) {
+          $('.form-call').fadeOut();
+          $('.form-thanks').fadeIn();
+          //alert('Спасибо за Вашу заявку.');
+        }
+      });
+
+    });
+
+    // POPUP FORM OFF
+
     $('.repairs-slider').slick({
       dots: true,
       arrows: true
