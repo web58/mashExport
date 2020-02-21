@@ -221,6 +221,11 @@ and (min-width: 768px){
     &-item{
       flex-direction: row;
       align-items: flex-start;
+      margin-bottom: 50px;
+
+      &:nth-last-child(2){
+        margin-bottom: 90px;
+      }
 
       &:nth-child(2n-1){
 
@@ -251,6 +256,9 @@ and (min-width: 768px){
       }
 
       &__img{
+
+        margin-bottom: 0;
+
         &::before{
           border-bottom: 11px solid rgba(170, 173, 204, 0.8);
           border-left: 11px solid rgba(170, 173, 204, 0.8);
@@ -301,6 +309,46 @@ and (min-width: 768px){
         }
       }
     }
+
+    .def-btn{
+      max-width: 360px;
+      margin-bottom: 70px;
+    }
+  }
+
+  .services{
+
+    &-wrap{
+      margin-bottom: 45px;
+    }
+
+    &-item{
+      &__desc{
+        padding: 0;
+
+        &-title{
+          font-size: 22px;
+          margin-bottom: 25px;
+        }
+
+        &-text{
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .container{
+      >.def-btn{
+        max-width: 360px;
+        margin-bottom: 100px;
+      }
+
+      >.def-form{
+        margin-bottom: 140px;
+      }
+    }
+
   }
 }
 
@@ -459,5 +507,23 @@ and (min-width: 1200px){
     }
   }
 
+  .what-repairs{
 
+    &-item{
+      margin-bottom: 60px;
+    }
+  }
+
+  .services{
+    &-item{
+
+      margin-bottom: 55px;
+
+      &__desc{
+
+        padding: 0 80px;
+
+      }
+    }
+  }
 }

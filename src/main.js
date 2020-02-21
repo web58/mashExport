@@ -8,6 +8,10 @@ jQuery(function($) {
 
     var wWindow = $(window).width();
 
+    if (wWindow < 1200){
+      $('.header__menu').addClass('fixed');
+    }
+
     // header opacity start
 
     $(window).on("scroll", function () {
@@ -28,7 +32,7 @@ jQuery(function($) {
     // burger start
 
     $('.burger').on('click', function (e) {
-      $('.header__menu').toggleClass('fixed');
+      $('.header__menu').toggleClass('active');
 
       if (wWindow < 768) {
         $('.header__call').toggleClass('mobile');
@@ -90,14 +94,13 @@ jQuery(function($) {
       $('.advantages-item__desc').removeClass('active');
       $('.advantages-item__line-left').removeClass('more-width');
       $('.advantages-item__line-right').removeClass('more-width');
-
     });
 
     // advantages item desc and img click end
 
     /*form-call start*/
 
-    $('.header-btn,.def-btn').on('click', function (e) {
+    $('.header-btn,.def-btn.call').on('click', function (e) {
       event.preventDefault(e);
       $('.form-call').fadeIn();
     });

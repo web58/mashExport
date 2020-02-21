@@ -20,7 +20,14 @@
   }
 
   &__menu{
-    display: none;
+    //display: none;
+    //right: -500px;
+    transition: 1s;
+
+    &.active{
+      //width: 300px;
+      right: 0!important;
+    }
 
     &.fixed{
       display: block;
@@ -30,7 +37,9 @@
       background-color: #2a3180;
       z-index: 99;
       width: 300px;
-      right: 0;
+      //width: 0;
+      //right: 0;
+      right: -300px;
       padding-top: 100px;
 
       ul{
@@ -183,9 +192,16 @@ and (min-width: 768px){
 
     &__menu{
 
+      width: 370px;
+
+      &.active{
+        //width: 370px;
+      }
+
       &.fixed{
 
         width: 370px;
+        right: -370px;
 
         p{
           padding-top: 125px;
