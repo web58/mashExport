@@ -111,6 +111,12 @@ jQuery(function($) {
 
     /*form-call end*/
 
+    /*input mask tel start*/
+
+    $(".def-form__input-field.phone").mask("+7 (999)999-99-99");
+
+    /*input mask tel end*/
+
     // POPUP FORM ON
 
     $('form').on('submit', function (e) {
@@ -145,11 +151,15 @@ jQuery(function($) {
     // POPUP FORM OFF
 
     $('.repairs-slider').slick({
+      autoplaySpeed: 20000,
+      autoplay: true,
       dots: true,
       arrows: true
     });
 
     $('.catalog-slider').slick({
+      autoplaySpeed: 20000,
+      autoplay: true,
       dots: true,
       arrows: true,
       slidesToShow: 4,

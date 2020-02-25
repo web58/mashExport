@@ -22,22 +22,25 @@
   &__menu{
     //display: none;
     //right: -500px;
-    transition: 1s;
 
     &.active{
-      //width: 300px;
-      right: 0!important;
+      width: 300px!important;
+
+      right: 0px!important;
     }
 
     &.fixed{
+      transition: 1s;
       display: block;
       position: fixed;
       height: 100vh;
       top: 0;
       background-color: #2a3180;
       z-index: 99;
-      width: 300px;
+      width: 150px;
+
       //width: 0;
+
       //right: 0;
       right: -300px;
       padding-top: 100px;
@@ -65,6 +68,7 @@
       display: flex;
       justify-content: space-between;
       list-style: none;
+      padding-left: 0;
 
       li{
 
@@ -82,13 +86,21 @@
 
   &__call{
 
-    display: none;
+    //display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-right: 0;
 
+    ///////////
+
+    width: 230px;
+    //transition: 1s;
+    right: -1000px;
+
     &.mobile{
+      transition: 1s;
+
       display: flex;
       top: 330px;
       z-index: 99;
@@ -200,7 +212,7 @@ and (min-width: 768px){
 
       &.fixed{
 
-        width: 370px;
+        width: 370px!important;
         right: -370px;
 
         p{
@@ -212,6 +224,7 @@ and (min-width: 768px){
     &__call{
       display: flex;
       margin-right: 30px;
+      right: auto;
     }
 
     .burger{
